@@ -37,7 +37,7 @@
                             <td class="border px-6 py-4">{{ number_format($item->price) }}</td>
                             <td class="border px-6 py-4">
                                 <div class="w-full md:w-1/6 px-4 mb-4 md:mb-0">
-                                    <img src="{{ $item->food->picturePath }}" alt="" class=" bg-[length:100px_50px]">
+                                    <img src="{{ $item->picturePath }}" alt="" class=" bg-[length:100px_50px]">
                                 </div>
                             </td>
                             <td class="border px-6 py-4">{{ $item->rate }}</td>
