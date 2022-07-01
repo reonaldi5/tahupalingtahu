@@ -20,7 +20,9 @@
                         <tr>
                             <th class="border px-6 py-4">ID</th>
                             <th class="border px-6 py-4">Name</th>
+                            <th class="border px-6 py-4">Ukuran</th>
                             <th class="border px-6 py-4">Price</th>
+                            <th class="border px-6 py-4">Gambar</th>
                             <th class="border px-6 py-4">Rate</th>
                             <th class="border px-6 py-4">Types</th>
                             <th class="border px-6 py-4">Action</th>
@@ -31,7 +33,13 @@
                         <tr>
                             <td class="border px-6 py-4">{{ $item->id }}</td>
                             <td class="border px-6 py-4 ">{{ $item->name }}</td>
+                            <td class="border px-6 py-4 ">{{ $item->ukuran }}</td>
                             <td class="border px-6 py-4">{{ number_format($item->price) }}</td>
+                            <td class="border px-6 py-4">
+                                <div class="w-full md:w-1/6 px-4 mb-4 md:mb-0">
+                                    <img src="{{ $item->food->picturePath }}" alt="" class=" bg-[length:100px_50px]">
+                                </div>
+                            </td>
                             <td class="border px-6 py-4">{{ $item->rate }}</td>
                             <td class="border px-6 py-4">{{ $item->types }}</td>
                             <td class="border px-6 py- text-center">
