@@ -18,7 +18,7 @@
                 <table class="table-auto w-full">
                     <thead>
                         <tr>
-                            <th class="border px-6 py-4">ID</th>
+                            <!-- <th class="border px-6 py-4">ID</th> -->
                             <th class="border px-6 py-4">Name</th>
                             <th class="border px-6 py-4">Ukuran</th>
                             <th class="border px-6 py-4">Price</th>
@@ -31,7 +31,7 @@
                     <tbody>
                         @forelse($produk as $item)
                         <tr>
-                            <td class="border px-6 py-4">{{ $item->id }}</td>
+                            <!-- <td class="border px-6 py-4">{{ $item->id }}</td> -->
                             <td class="border px-6 py-4 ">{{ $item->name }}</td>
                             <td class="border px-6 py-4 ">{{ $item->ukuran }}</td>
                             <td class="border px-6 py-4">{{ number_format($item->price) }}</td>
