@@ -76,6 +76,9 @@ class UserController extends Controller
                 'password' => Hash::make($request->password),
             ]);
 
+            dd($request);
+            var_dump($request);
+
             $user = User::where('email', $request->email)->first();
 
             $tokenResult = $user->createToken('authToken')->plainTextToken;
