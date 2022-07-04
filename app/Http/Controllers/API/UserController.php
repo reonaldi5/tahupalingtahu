@@ -20,10 +20,19 @@ class UserController extends Controller
     {
         try {
             // validasi input
-            $request->validate([
-                'email' =>  'email|required',
+            // $request->validate([
+            //     'email' =>  'email|required',
+            //     'password' => 'required'
+            // ]);
+
+            $validator = Validator::make($request->all(), [
+                'email' => 'required|email',
                 'password' => 'required'
             ]);
+
+            if ($validator->fails()) {
+                return response()->json($validator->errors(), 400);
+            }
 
             // mengecek credentials (login)
             $credentials = request(['email', 'password']);
@@ -60,11 +69,7 @@ class UserController extends Controller
     public function register(Request $request)
     {
         try {
-            // Validator::make($request->all(), [
-            //     'name' => ['required', 'string', 'max:255'],
-            //     'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            //     'password' => $this->passwordRules()
-            // ]);
+
             $request->validate([
                 'name' => ['required', 'string', 'max:255'],
                 'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],

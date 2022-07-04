@@ -79,11 +79,27 @@
                             <br>
                             <div class="w-1/6">
                                 <div class="text-sm mb-1">Change Status</div>
-                                <a style="background-color: blue;" href="{{ route('transactions.changeStatus', ['id' => $item->id, 'status' => 'ON_DELIVERY']) }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold px-2 rounded block text-center w-full mb-1">
+                                <!-- <a style="background-color: blue;" href="{{ route('transactions.changeStatus', ['id' => $item->id, 'status' => 'ON_DELIVERY']) }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold px-2 rounded block text-center w-full mb-1">
                                     On Delivery
                                 </a>
                                 <a style="background-color: green;" href="{{ route('transactions.changeStatus', ['id' => $item->id, 'status' => 'DELIVERED']) }}" class="bg-green-500 hover:bg-green-700 text-white font-bold px-2 rounded block text-center w-full mb-1">
                                     Delivered
+                                </a>
+                                <a style="background-color: red;" href="{{ route('transactions.changeStatus', ['id' => $item->id, 'status' => 'CANCELLED']) }}" class="bg-red-500 hover:bg-red-700 text-white font-bold px-2 rounded block text-center w-full mb-1">
+                                    Cancelled
+                                </a> -->
+
+                                <a style="background-color: blue;" href="{{ route('transactions.changeStatus', ['id' => $item->id, 'status' => 'belum_dibayar']) }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold px-2 rounded block text-center w-full mb-1">
+                                    Belum Dibayar
+                                </a>
+                                <a style="background-color: green;" href="{{ route('transactions.changeStatus', ['id' => $item->id, 'status' => 'sudah_dibayar']) }}" class="bg-green-500 hover:bg-green-700 text-white font-bold px-2 rounded block text-center w-full mb-1">
+                                    Sudah Dibayar
+                                </a>
+                                <a style="background-color: green;" href="{{ route('transactions.changeStatus', ['id' => $item->id, 'status' => 'sedang_perjalanan']) }}" class="bg-green-500 hover:bg-green-700 text-white font-bold px-2 rounded block text-center w-full mb-1">
+                                    Sedang Perjalanan
+                                </a>
+                                <a style="background-color: green;" href="{{ route('transactions.changeStatus', ['id' => $item->id, 'status' => 'sudah_tiba']) }}" class="bg-green-500 hover:bg-green-700 text-white font-bold px-2 rounded block text-center w-full mb-1">
+                                    sudah Tiba
                                 </a>
                                 <a style="background-color: red;" href="{{ route('transactions.changeStatus', ['id' => $item->id, 'status' => 'CANCELLED']) }}" class="bg-red-500 hover:bg-red-700 text-white font-bold px-2 rounded block text-center w-full mb-1">
                                     Cancelled
