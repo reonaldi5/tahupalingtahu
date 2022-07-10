@@ -24,14 +24,14 @@
                     <tbody>
                         @forelse($transaction as $item)
                         {{$epoch = $item->createdAt}}
-                        {{ $dt = new Datetime($epoch)}}
+                        <!-- {{ $dt = new Datetime($epoch)}} -->
                         <tr>
                             <td class="border px-6 py-4">{{ $item->id }}</td>
                             <td class="border px-6 py-4 ">{{ $item->food->name }}</td>
                             <td class="border px-6 py-4 ">{{ $item->user->name }}</td>
                             <td class="border px-6 py-4">{{ $item->food->ukuran }}</td>
                             <td class="border px-6 py-4">{{ number_format($item->total) }}</td>
-                            <td class="border px-6 py-4">{{ $dt->format('Y-m-d H:i:s'); }}</td>
+                            <td class="border px-6 py-4">{{ $epoch }}</td>
                             <td class="border px-6 py-4">{{ $item->status }}</td>
                             <td class="border px-6 py- text-center">
                                 <a style="background-color: blue;" href="{{ route('transactions.show', $item->id) }}" class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mx-2 rounded">
