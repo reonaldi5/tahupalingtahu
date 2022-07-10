@@ -24,8 +24,6 @@
                     <tbody>
                         @forelse($transaction as $item)
                         @inject('carbon', 'Carbon\Carbon')
-                        <!-- {{$epoch = $item->createdAt}} -->
-                        <!-- {{ $dt = new Datetime($epoch)}} -->
                         <tr>
                             <td class="border px-6 py-4">{{ $item->id }}</td>
                             <td class="border px-6 py-4 ">{{ $item->food->name }}</td>
