@@ -23,7 +23,7 @@
                             <th class="border px-6 py-4">Ukuran</th>
                             <th class="border px-6 py-4">Price</th>
                             <th class="border px-6 py-4">Gambar</th>
-                            <th class="border px-6 py-4">Rate</th>
+                            <!-- <th class="border px-6 py-4">Rate</th> -->
                             <th class="border px-6 py-4">Types</th>
                             <th class="border px-6 py-4">Action</th>
                         </tr>
@@ -40,7 +40,7 @@
                                     <img src="{{ $item->picturePath }}" alt="" class=" bg-[length:100px_50px]">
                                 </div>
                             </td>
-                            <td class="border px-6 py-4">{{ $item->rate }}</td>
+                            <!-- <td class="border px-6 py-4">{{ $item->rate }}</td> -->
                             <td class="border px-6 py-4">{{ $item->types }}</td>
                             <td class="border px-6 py- text-center">
                                 <a style="background-color: blue;" href="{{ route('produk.edit', $item->id) }}" class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mx-2 rounded">

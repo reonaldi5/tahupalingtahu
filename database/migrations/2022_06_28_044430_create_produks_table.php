@@ -20,7 +20,7 @@ class CreateProduksTable extends Migration
             $table->string('ukuran')->nullable();
             $table->text('description')->nullable();
             $table->integer('price')->nullable();
-            $table->double('rate')->nullable();
+            // $table->double('rate')->nullable();
             $table->string('types')->default('recommended');
             $table->text('picturePath')->nullable();
 

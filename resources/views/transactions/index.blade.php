@@ -14,8 +14,9 @@
                             <th class="border px-6 py-4">ID</th>
                             <th class="border px-6 py-4">Produk</th>
                             <th class="border px-6 py-4">User</th>
-                            <th class="border px-6 py-4">Quantity</th>
-                            <th class="border px-6 py-4">Total</th>
+                            <th class="border px-6 py-4">Ukuran</th>
+                            <th class="border px-6 py-4">Harga</th>
+                            <th class="border px-6 py-4">Tanggal Transaksi</th>
                             <th class="border px-6 py-4">Status</th>
                             <th class="border px-6 py-4">Action</th>
                         </tr>
@@ -26,8 +27,9 @@
                             <td class="border px-6 py-4">{{ $item->id }}</td>
                             <td class="border px-6 py-4 ">{{ $item->food->name }}</td>
                             <td class="border px-6 py-4 ">{{ $item->user->name }}</td>
-                            <td class="border px-6 py-4">{{ $item->quantity }}</td>
+                            <td class="border px-6 py-4">{{ $item->ukuran }}</td>
                             <td class="border px-6 py-4">{{ number_format($item->total) }}</td>
+                            <td class="border px-6 py-4">{{ $item->createdAt }}</td>
                             <td class="border px-6 py-4">{{ $item->status }}</td>
                             <td class="border px-6 py- text-center">
                                 <a style="background-color: blue;" href="{{ route('transactions.show', $item->id) }}" class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mx-2 rounded">

@@ -13,7 +13,8 @@ class Produk extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        'name', 'ukuran', 'description', 'price', 'rate', 'types', 'picturePath'
+        // 'name', 'ukuran', 'description', 'price', 'rate', 'types', 'picturePath'
+        'name', 'ukuran', 'description', 'price', 'types', 'picturePath'
     ];
 
     public function toArray()
