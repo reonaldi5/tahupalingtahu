@@ -23,8 +23,8 @@
                     </thead>
                     <tbody>
                         @forelse($transaction as $item)
-                        {{$epoch = $item->createdAt;
-                        $dt = new DateTime("@$epoch"); }}
+                        {{$epoch = $item->createdAt}}
+                        {{ $dt = new Datetime("@$epoch")}}
                         <tr>
                             <td class="border px-6 py-4">{{ $item->id }}</td>
                             <td class="border px-6 py-4 ">{{ $item->food->name }}</td>
