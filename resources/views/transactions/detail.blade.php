@@ -22,7 +22,7 @@
                             <br><br>
                             <div class="w-2/6">
                                 <div class="text-sm">Ukuran</div>
-                                <div class="text-xl font-bold">{{ number_format($item->food->ukuran) }}</div>
+                                <div class="text-xl font-bold">{{ ($item->food->ukuran) }}</div>
                             </div>
                             <br><br>
                             <div class="w-2/6">
