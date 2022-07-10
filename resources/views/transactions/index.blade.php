@@ -27,7 +27,7 @@
                             <td class="border px-6 py-4">{{ $item->id }}</td>
                             <td class="border px-6 py-4 ">{{ $item->food->name }}</td>
                             <td class="border px-6 py-4 ">{{ $item->user->name }}</td>
-                            <td class="border px-6 py-4">{{ $item->ukuran }}</td>
+                            <td class="border px-6 py-4">{{ $item->food->ukuran }}</td>
                             <td class="border px-6 py-4">{{ number_format($item->total) }}</td>
                             <td class="border px-6 py-4">{{ $item->createdAt }}</td>
                             <td class="border px-6 py-4">{{ $item->status }}</td>
