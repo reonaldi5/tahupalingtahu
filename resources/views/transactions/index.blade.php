@@ -23,7 +23,8 @@
                     </thead>
                     <tbody>
                         @forelse($transaction as $item)
-                        @inject('carbon', 'Carbon\Carbon')
+                        @inject('carbon', 'Carbon\Carbon', Carbon::setLocale('id'))
+                        {{ date_default_timezone_set('Asia/Jakarta') }}
                         <tr>
                             <td class="border px-6 py-4">{{ $item->id }}</td>
                             <td class="border px-6 py-4 ">{{ $item->food->name }}</td>
