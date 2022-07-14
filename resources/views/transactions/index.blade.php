@@ -24,7 +24,6 @@
                     </thead>
                     <tbody>
                         @forelse($transaction as $item)
-                        {{ $i = 1 }}
                         @inject('carbon', 'Carbon\Carbon', Carbon::setLocale('id'))
                         <tr>
                             <td class="border px-6 py-4">{{ $i }}</td>
@@ -53,7 +52,6 @@
                                 Data Tidak Ditemukan
                             </td>
                         </tr>
-                        {{ $i++ }}
                         @endforelse
                     </tbody>
                 </table>
