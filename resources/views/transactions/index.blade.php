@@ -25,7 +25,6 @@
                     <tbody>
                         @forelse($transaction as $item)
                         {{ $i = 1 }}
-                        @while ()
                         @inject('carbon', 'Carbon\Carbon', Carbon::setLocale('id'))
                         <tr>
                             <td class="border px-6 py-4">{{ $i }}</td>
@@ -55,7 +54,6 @@
                             </td>
                         </tr>
                         {{ $i++ }}
-                        @endwhile
                         @endforelse
                     </tbody>
                 </table>
