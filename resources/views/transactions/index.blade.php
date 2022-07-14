@@ -20,7 +20,6 @@
                             <th class="border px-6 py-4">Status</th>
                             <th class="border px-6 py-4">Action</th>
                         </tr>
-                        @endforelse
                     </thead>
                     <tbody>
                         @forelse($transaction as $item)
