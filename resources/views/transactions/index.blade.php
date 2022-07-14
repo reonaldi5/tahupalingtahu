@@ -10,9 +10,8 @@
             <div class="bg-white">
                 <table class="table-auto w-full">
                     <thead>
-                        @forelse($no = 1)
                         <tr>
-                            <th class="border px-6 py-4">{{ $no }}</th>
+                            <th class="border px-6 py-4">No</th>
                             <th class="border px-6 py-4">Produk</th>
                             <th class="border px-6 py-4">User</th>
                             <th class="border px-6 py-4">Ukuran</th>
@@ -21,14 +20,15 @@
                             <th class="border px-6 py-4">Status</th>
                             <th class="border px-6 py-4">Action</th>
                         </tr>
-                        {{ $no++ }}
                         @endforelse
                     </thead>
                     <tbody>
                         @forelse($transaction as $item)
+                        {{ $i = 1 }}
+                        @while ()
                         @inject('carbon', 'Carbon\Carbon', Carbon::setLocale('id'))
                         <tr>
-                            <td class="border px-6 py-4">{{ $item->id }}</td>
+                            <td class="border px-6 py-4">{{ $i }}</td>
                             <td class="border px-6 py-4 ">{{ $item->food->name }}</td>
                             <td class="border px-6 py-4 ">{{ $item->user->name }}</td>
                             <td class="border px-6 py-4">{{ $item->food->ukuran }}</td>
@@ -54,6 +54,8 @@
                                 Data Tidak Ditemukan
                             </td>
                         </tr>
+                        {{ $i++ }}
+                        @endwhile
                         @endforelse
                     </tbody>
                 </table>
