@@ -46,13 +46,13 @@
                                 </form>
                             </td>
                         </tr>
+                        <?php $i++; ?>
                         @empty
                         <tr>
                             <td colspan="7" class="border text-center p-5">
                                 Data Tidak Ditemukan
                             </td>
                         </tr>
-                        <?php $i++; ?>
                         @endforelse
                     </tbody>
                 </table>
