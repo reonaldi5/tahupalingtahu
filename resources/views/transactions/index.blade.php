@@ -24,8 +24,9 @@
                     <tbody>
                         @forelse($transaction as $item)
                         @inject('carbon', 'Carbon\Carbon', Carbon::setLocale('id'))
+                        @for ($i = 1; $i++)
                         <tr>
-                            <td class="border px-6 py-4">{{ $item->id }}</td>
+                            <td class="border px-6 py-4">{{ $i }}</td>
                             <td class="border px-6 py-4 ">{{ $item->food->name }}</td>
                             <td class="border px-6 py-4 ">{{ $item->user->name }}</td>
                             <td class="border px-6 py-4">{{ $item->food->ukuran }}</td>
@@ -51,6 +52,7 @@
                                 Data Tidak Ditemukan
                             </td>
                         </tr>
+                        @endfor
                         @endforelse
                     </tbody>
                 </table>
