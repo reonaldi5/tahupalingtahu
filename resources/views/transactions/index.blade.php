@@ -11,7 +11,7 @@
                 <table class="table-auto w-full">
                     <thead>
                         <tr>
-                            <th class="border px-6 py-4">No</th>
+                            <th class="border px-6 py-4">ID</th>
                             <th class="border px-6 py-4">Produk</th>
                             <th class="border px-6 py-4">User</th>
                             <th class="border px-6 py-4">Ukuran</th>

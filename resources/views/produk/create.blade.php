@@ -75,6 +75,7 @@
                                 Rate
                             </label>
                             <input value="{{ old('rate') }}" name="rate" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="number" step="0.01" max="5" placeholder="produk Rate">
+                            <p class="text-gray-600 text-xs italic">isikan dengan angka "4"</p>
                         </div>
                     </div>
                     <div class="flex flex-wrap -mx-3 mb-6">
