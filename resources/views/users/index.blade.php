@@ -35,9 +35,7 @@
                             <td class="border px-6 py-4">{{ $item->email }}</td>
                             <td class="border px-6 py-4">{{ $item->roles }}</td>
                             <td class="border px-6 py- text-center">
-                                <a style="background-color: blue;" href="{{ route('users.edit', $item->id) }}" class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mx-2 rounded">
-                                    Edit
-                                </a>
+
                                 <form action="{{ route('users.destroy', $item->id) }}" method="POST" class="inline-block">
                                     <br>
                                     {!! method_field('delete') . csrf_field() !!}
