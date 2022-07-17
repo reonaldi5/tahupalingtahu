@@ -70,24 +70,34 @@ class UserController extends Controller
     {
         try {
 
-            $request->validate([
+            // $request->validate([
+            //     'name' => ['required', 'string', 'max:255'],
+            //     'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            //     'password' => $this->passwordRules()
+            // ]);
+
+            $validator = Validator::make($request->all(), [
                 'name' => ['required', 'string', 'max:255'],
                 'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
                 'password' => $this->passwordRules()
             ]);
 
+            if ($validator->fails()) {
+                return response()->json($validator->errors(), 400);
+            }
+
             User::create([
-                'name' => $request->name,
-                'email' => $request->email,
-                'password' => Hash::make($request->password),
-                'address' => $request->address,
-                'houseNumber' => $request->houseNumber,
-                'phoneNumber' => $request->phoneNumber,
-                'city' => $request->city,
+                'name' => $validator->name,
+                'email' => $validator->email,
+                'password' => Hash::make($validator->password),
+                'address' => $validator->address,
+                'houseNumber' => $validator->houseNumber,
+                'phoneNumber' => $validator->phoneNumber,
+                'city' => $validator->city,
             ]);
 
 
-            $user = User::where('email', $request->email)->first();
+            $user = User::where('email', $validator->email)->first();
 
             $tokenResult = $user->createToken('authToken')->plainTextToken;
 
