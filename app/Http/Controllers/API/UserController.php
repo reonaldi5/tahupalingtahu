@@ -87,17 +87,17 @@ class UserController extends Controller
             }
 
             User::create([
-                'name' => $validator->name,
-                'email' => $validator->email,
-                'password' => Hash::make($validator->password),
-                'address' => $validator->address,
-                'houseNumber' => $validator->houseNumber,
-                'phoneNumber' => $validator->phoneNumber,
-                'city' => $validator->city,
+                'name' => $request->name,
+                'email' => $request->email,
+                'password' => Hash::make($request->password),
+                'address' => $request->address,
+                'houseNumber' => $request->houseNumber,
+                'phoneNumber' => $request->phoneNumber,
+                'city' => $request->city,
             ]);
 
 
-            $user = User::where('email', $validator->email)->first();
+            $user = User::where('email', $request->email)->first();
 
             $tokenResult = $user->createToken('authToken')->plainTextToken;
 
