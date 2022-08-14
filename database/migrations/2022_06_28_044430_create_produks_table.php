@@ -18,6 +18,7 @@ class CreateProduksTable extends Migration
 
             $table->string('name')->nullable();
             $table->string('ukuran')->nullable();
+            $table->string('stok')->nullable();
             $table->text('description')->nullable();
             $table->integer('price')->nullable();
             // $table->double('rate')->nullable();

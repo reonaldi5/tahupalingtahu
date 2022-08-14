@@ -15,6 +15,7 @@ class ProdukController extends Controller
         $limit = $request->input('limit', 15);
         $name = $request->input('name');
         $ukuran = $request->input('ukuran');
+        $stok = $request->input('stok');
         $types = $request->input('types');
 
         $price_from = $request->input('price_from');
@@ -46,6 +47,9 @@ class ProdukController extends Controller
 
         if ($ukuran)
             $produk->where('ukuran', 'like', '%' . $ukuran . '%');
+
+        if ($stok)
+            $produk->where('stok', 'like', '%' . $stok . '%');
 
         if ($types)
             $produk->where('types', 'like', '%' . $types . '%');

@@ -26,6 +26,7 @@ class ProdukRequest extends FormRequest
         return [
             'name' => 'required|max:255',
             'ukuran' => 'required',
+            'stok' => 'required',
             'description' => 'required',
             'price' => 'required|integer',
             'rate' => 'required',

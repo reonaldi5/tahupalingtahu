@@ -14,7 +14,7 @@ class Produk extends Model
 
     protected $fillable = [
         // 'name', 'ukuran', 'description', 'price', 'rate', 'types', 'picturePath'
-        'name', 'ukuran', 'description', 'price', 'types', 'picturePath'
+        'name', 'ukuran', 'stok', 'description', 'price', 'types', 'picturePath'
     ];
 
     public function toArray()
